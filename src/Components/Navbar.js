@@ -1,43 +1,80 @@
-import React from 'react';
+import React, {useState, useEffect} from 'react';
 import { Link } from 'react-router-dom';
-import { BiSearch } from 'react-icons/bi'
-import { AiOutlineShoppingCart, AiOutlineBell } from 'react-icons/ai'
+import { BiSearch } from 'react-icons/bi';
+import { GoThreeBars } from 'react-icons/go';
+import { AiOutlineShoppingCart, AiOutlineBell,  AiOutlineClose } from 'react-icons/ai';
 
 function Navbar() {
+
+  const [windowWidth, setWindowWidth] = useState({
+    currentWidth: window.innerWidth
+  })
+
+  const updateWindowSize = () => {
+    setWindowWidth({currentWidth: window.innerWidth})
+  }
+
+  const [mobileNav, setMobileNav] = useState(false)
+
+  function openMobileLinks(){
+    setMobileNav(true)
+  }
+
+  function closeMobileLinks(){
+    setMobileNav(false)
+  }
+
+  useEffect(() => {
+    window.addEventListener('resize', updateWindowSize)
+
+    return() => {
+      window.removeEventListener('resize', updateWindowSize)
+    }
+  }, [windowWidth])
+
   return (
-    <nav className='flex pl-28 items-center h-16 justify-between pr-14'>
-      <div className='text-3xl'>ARTSY.</div>
-      <ul className='flex w-2/4 justify-between'>
-        <li className=''>
-          <Link className='relative group' to='/'>
-            Home
-            <div className='w-0 h-0.5 rounded-sm absolute bg-black group-hover:w-full transition-transform'/>
-          </Link>
-        </li>
+    <nav className='flex pl-5 md:pl-28 items-center h-16 justify-between w-full fixed pr-5 sm:pr-14 z-40 bg-white'
+      >
+      <i className='text-2xl sm:hidden cursor-pointer' onClick={openMobileLinks}><GoThreeBars /></i>
+      <div className='text-2xl sm:text-3xl'>ARTSY.</div>
 
-        <li className=''>
-          <Link className='relative group' to='/'>
-            Marketplace
-            <div className='w-0 h-0.5 rounded-sm absolute bg-black group-hover:w-full transition-transform'/>
-          </Link>
-        </li>
+      <div className={`w-full h-screen sm:h-fit left-0 sm:w-2/4 flex flex-col top-px sm:static  fixed z-50 bg-white ${mobileNav ? 'top-0' : 'top-full'}`}>
+        <div className='block sm:hidden flex items-center mt-2 mb-9 text-3xl'>
+          <div className='font-bold'>ARTSY.</div>
+          <i className='ml-auto cursor-pointer' onClick={closeMobileLinks}><AiOutlineClose /></i>
+        </div>
+        <ul className='flex h-72 font-medium text-2xl sm:text-lg sm:h-fit sm:flex-row justify-between flex-col w-full'>
+          <li className=''>
+            <Link className='relative group' to='/'>
+              Home
+              <div className='w-0 h-0.5 rounded-sm absolute bg-black group-hover:w-full transition-transform'/>
+            </Link>
+          </li>
 
-        <li className=''>
-          <Link className='relative group' to='/'>
-            Auctions
-            <div className='w-0 h-0.5 rounded-sm absolute bg-black group-hover:w-full transition-transform'/>
-          </Link>
-        </li>
+          <li className=''>
+            <Link className='relative group' to='/'>
+              Marketplace
+              <div className='w-0 h-0.5 rounded-sm absolute bg-black group-hover:w-full transition-transform'/>
+            </Link>
+          </li>
 
-        <li className=''>
-          <Link className='relative group' to='/'>
-            Drop
-            <div className='w-0 h-0.5 rounded-sm absolute bg-black group-hover:w-full transition-transform'/>
-          </Link>
-        </li>
-        
-      </ul>
-      <div className='flex w-1/12 justify-between text-2xl'>
+          <li className=''>
+            <Link className='relative group' to='/'>
+              Auctions
+              <div className='w-0 h-0.5 rounded-sm absolute bg-black group-hover:w-full transition-transform'/>
+            </Link>
+          </li>
+
+          <li className=''>
+            <Link className='relative group' to='/'>
+              Drop
+              <div className='w-0 h-0.5 rounded-sm absolute bg-black group-hover:w-full transition-transform'/>
+            </Link>
+          </li>
+
+        </ul>
+      </div>
+      <div className='flex justify-between text-2xl'>
         <i><BiSearch /></i>
         <i><AiOutlineShoppingCart /></i>
         <i><AiOutlineBell /></i>
