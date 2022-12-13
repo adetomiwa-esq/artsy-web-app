@@ -33,7 +33,7 @@ function Navbar() {
   }, [windowWidth])
 
   return (
-    <nav className='flex pl-5 md:pl-28 items-center h-16 justify-between w-full fixed pr-5 sm:pr-14 z-40 bg-white'
+    <nav className='flex pl-5 lg:pl-28 items-center h-16 justify-between w-full fixed pr-5 sm:pr-14 z-40 bg-white'
       >
       <i className='text-2xl sm:hidden cursor-pointer' onClick={openMobileLinks}><GoThreeBars /></i>
       <div className='text-2xl sm:text-3xl'>ARTSY.</div>

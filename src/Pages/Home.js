@@ -1,8 +1,9 @@
-import React, { useState, useEffect } from 'react'
-import HomeCarousel from '../Components/HomeCarousel'
-import HomeCreators from '../Components/HomeCreators'
-import HomeProducts from '../Components/HomeProducts'
-import UpcomigAuctions from '../Components/UpcomigAuctions'
+import React, { useState, useEffect } from 'react';
+import HomeCarousel from '../Components/HomeCarousel';
+import HomeCreators from '../Components/HomeCreators';
+import HomeProducts from '../Components/HomeProducts';
+import NewsLetter from '../Components/NewsLetter';
+import UpcomigAuctions from '../Components/UpcomigAuctions';
 
 function Home() {
 
@@ -30,7 +31,8 @@ function Home() {
         windowWidth={windowWidth.currentWidth}
       />
       <UpcomigAuctions />
-      <HomeCreators />
+      {/* <HomeCreators /> */}
+      <NewsLetter />
     </div>
   )
 }
