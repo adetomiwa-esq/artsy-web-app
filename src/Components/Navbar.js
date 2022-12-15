@@ -44,29 +44,29 @@ function Navbar() {
           <i className='ml-auto cursor-pointer' onClick={closeMobileLinks}><AiOutlineClose /></i>
         </div>
         <ul className='flex h-72 font-medium text-2xl sm:text-lg sm:h-fit sm:flex-row justify-between flex-col w-full'>
-          <li className=''>
+          <li className='' onClick={closeMobileLinks}>
             <Link className='relative group' to='/'>
               Home
               <div className='w-0 h-0.5 rounded-sm absolute bg-black group-hover:w-full transition-transform'/>
             </Link>
           </li>
 
-          <li className=''>
-            <Link className='relative group' to='/'>
+          <li className='' onClick={closeMobileLinks}>
+            <Link className='relative group' to='marketplace'>
               Marketplace
               <div className='w-0 h-0.5 rounded-sm absolute bg-black group-hover:w-full transition-transform'/>
             </Link>
           </li>
 
-          <li className=''>
+          <li className='' onClick={closeMobileLinks}>
             <Link className='relative group' to='/'>
               Auctions
               <div className='w-0 h-0.5 rounded-sm absolute bg-black group-hover:w-full transition-transform'/>
             </Link>
           </li>
 
-          <li className=''>
-            <Link className='relative group' to='/'>
+          <li className='' onClick={closeMobileLinks}>
+            <Link className='relative group' to='/drop'>
               Drop
               <div className='w-0 h-0.5 rounded-sm absolute bg-black group-hover:w-full transition-transform'/>
             </Link>

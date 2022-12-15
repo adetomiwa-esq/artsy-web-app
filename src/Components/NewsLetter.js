@@ -10,7 +10,9 @@ function NewsLetter() {
                 <h3 className='text-2xl mb-1 sm:mb-4'>NEWSLETTER</h3>
                 <p className='mb-4 sm:mb-7'>{`Subscribe to get daily updates on new drops ${'&'} exciting deals`}</p>
                 <div className='flex w-full sm:w-fit flex-col sm:flex-row'>
-                    <input className='border-2 px-3 h-12 mr-6 w-9/12 sm:w-72 mb-5 sm:mb-0' />
+                    <input className='border-2 px-3 h-12 mr-6 w-9/12 sm:w-72 mb-5 sm:mb-0' 
+                      placeholder='ENTER YOUR EMAIL'
+                    />
                     <button className='bg-black text-white w-40 h-12'>Subscribe</button>
                 </div>
             </div>
@@ -41,7 +43,7 @@ function NewsLetter() {
                   </ul>
                 </div>
               </div>
-              <div className='hidden text-center mt-5 sm:block'>Artsystudios &copy; 2022. All Rights Reserved.</div>
+              <div className='hidden text-center sm:mt-16 sm:block'>Artsystudios &copy; 2022. All Rights Reserved.</div>
             </footer>
         </div>
     </div>
