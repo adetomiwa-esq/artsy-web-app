@@ -1,0 +1,107 @@
+/* Shipping details left- form styling */
+
+.my-input {
+    margin-top: 25px;
+}
+
+.first {
+    margin-top: 0px;
+}
+
+.my-input label {
+    display: block;
+}
+
+#country, #postalCode {
+    background-color: rgb(228, 227, 227);
+}
+
+.location {
+    display: flex;
+}
+
+.location .your-country, .location .your-code {
+    width: 50%;
+}
+
+.location .your-country {
+    margin-right: 12px;
+}
+
+.location .your-country select, .location .your-code input {
+    width: 100%;
+    outline: 0px;
+    padding: 7px;
+    border-radius: 5px;
+    margin-top: 6px;
+}
+
+#city, #wallet, #phone, #user-email, #your-name {
+    margin-top: 6px;
+    border-radius: 5px;
+    padding: 7px;
+    width: 100%;
+    outline: 0px;
+    background-color: rgb(228, 227, 227);
+}
+
+.check-label{
+    font-size: 14px;
+}
+
+#notifyMe {
+    margin-right: 8px;
+}
+
+@media(max-width:640px){
+    .location {
+        flex-direction: column;
+    }
+
+    .location .your-country, .location .your-code {
+        width: 100%;
+    }
+
+    .location .your-code {
+        margin-top: 25px;
+    }
+
+    .location .your-country {
+        margin-right: 0px;
+    }
+}
+
+/* empty cart warning */
+.empty-cart {
+    display: flex;
+    align-items: center;
+    font-size: 34px;
+    border: 2px solid blue;
+    background-color: white;
+    position: absolute;
+    left: 50%;
+    transform: translateX(-50%);
+    top: -2000%;
+    padding: 8px 35px;
+    transition: all 1000ms ease-in;
+    z-index: 20;
+}
+
+.reveal-cart-warning {
+    top: 85px;
+}
+
+.empty-cart div {
+    margin-right: 12px;
+}
+
+@media(max-width:640px){
+    .empty-cart {
+        font-size: 25px;
+        width: 80%;
+        display: flex;
+        padding: 0px 0px;
+        display: flex;
+        justify-content: center;
+    }
+}

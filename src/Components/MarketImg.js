@@ -12,63 +12,63 @@ import product9 from '../Images/marketImg9.png';
 export default [
     {
         name: 'PHILOMENA',
-        price: 3.90,
+        price: 37,
         imgSrc: product1,
         id: 1
     },
 
     {
         name: 'BOOLEAN EGYPTIAN',
-        price: 3.90,
+        price: 39,
         imgSrc: product2,
         id: 2
     },
 
     {
         name: 'BLANC',
-        price: 3.90,
+        price: 32,
         imgSrc: product3,
         id: 3
     },
 
     {
         name: 'ELLIPSIA',
-        price: 3.90,
+        price: 40,
         imgSrc: product4,
         id: 4
     },
 
     {
         name: 'THE LAWMAKERS',
-        price: 3.90,
+        price: 28,
         imgSrc: product5,
         id: 5
     },
 
     {
         name: 'VEIL',
-        price: 3.90,
+        price: 23,
         imgSrc: product6,
         id: 6
     },
 
     {
         name: 'ALTERNATING',
-        price: 3.90,
+        price: 30,
         imgSrc: product7,
         id: 7
     },
 
     {
         name: "ROSEMARY '22",
-        price: 3.90,
+        price: 42,
         imgSrc: product8,
         id: 8
     },
 
     {
         name: 'BEVERLY',
-        price: 3.90,
+        price: 21,
         imgSrc: product9,
         id: 9
     },

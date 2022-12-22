@@ -8,7 +8,8 @@ function MarketBox({img, productName, price, setCurrentItem}) {
   function replaceCurrentItem(){
     setCurrentItem({
       itemName: productName,
-      imgSrc: img
+      imgSrc: img,
+      price: price
     })
 
     navigate('/editorials')

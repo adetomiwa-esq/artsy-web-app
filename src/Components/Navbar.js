@@ -4,7 +4,7 @@ import { BiSearch } from 'react-icons/bi';
 import { GoThreeBars } from 'react-icons/go';
 import { AiOutlineShoppingCart, AiOutlineBell,  AiOutlineClose } from 'react-icons/ai';
 
-function Navbar() {
+function Navbar({cartItems}) {
 
   const [windowWidth, setWindowWidth] = useState({
     currentWidth: window.innerWidth
@@ -33,7 +33,7 @@ function Navbar() {
   }, [windowWidth])
 
   return (
-    <nav className='flex pl-5 lg:pl-28 items-center h-16 justify-between w-full fixed pr-5 sm:pr-14 z-40 bg-white'
+    <nav className='flex pl-5 lg:pl-28 items-center h-16 justify-between w-full fixed pr-2 md:pr-14 z-40 bg-white'
       >
       <i className='text-2xl sm:hidden cursor-pointer' onClick={openMobileLinks}><GoThreeBars /></i>
       <div className='text-2xl sm:text-3xl'>ARTSY.</div>
@@ -76,7 +76,7 @@ function Navbar() {
       </div>
       <div className='flex justify-between text-2xl'>
         <i><BiSearch /></i>
-        <i><AiOutlineShoppingCart /></i>
+        <Link className='ml-2 mr-2 relative' to='/cart'><AiOutlineShoppingCart /><div className={`${cartItems.length ? 'block' : 'hidden'} w-4 h-4 rounded-full bg-red-500 absolute -top-0.5 -right-2 text-sm flex items-center justify-center text-white`}>{cartItems.length}</div></Link>
         <i><AiOutlineBell /></i>
       </div>
     </nav>
