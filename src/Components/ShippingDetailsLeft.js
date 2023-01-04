@@ -1,7 +1,10 @@
-import React, { useState } from 'react';
+import React, { useState, useEffect
+ } from 'react';
 import { Link } from 'react-router-dom';
+import {BsEmojiExpressionless} from 'react-icons/bs';
 
-function ShippingDetailsLeft() {
+function ShippingDetailsLeft({cartItems}) {
+
   const [userDetails, setUserDetails] = useState({
     email: '',
     isChecked: false,
@@ -22,9 +25,43 @@ function ShippingDetailsLeft() {
       }
     })
   }
+
+
+  useEffect(() => {
+    if(!cartItems.length){
+    const cartWarning = document.querySelector('#cart-warning')
+    const emptyCart =document.querySelector('.empty-cart')
+    
+    cartWarning.addEventListener("click", warningSlideIn)
+
+    function warningSlideIn() {
+        emptyCart.classList.add('reveal-cart-warning')
+
+        const removeNotification = setInterval(clearNotification, 7000)
+            function clearNotification(){
+                emptyCart.classList.remove('reveal-cart-warning')
+                clearInterval(removeNotification)
+            }
+    }
+    }
+
+    if(cartItems.length) {
+      const proceedToPayment = document.querySelector('#proceedToPayment');
+    //  proceedToPayment.style.pointerEvents = 'none'
+    proceedToPayment.addEventListener('click', submitDetails)
+
+    function submitDetails(){
+      if(userDetails.email !== '') {
+         alert(userDetails.email)
+      }
+      
+    }
+    }
+},[cartItems.length])
+
   return (
     <div className='text-zinc-500 w-full md:w-6/12'>
-      <form className='flex flex-col'>
+      <form id='form' className='flex flex-col'>
         <div className='my-input first'>
           <label htmlFor='user-email'>Your email</label>
           <input 
@@ -140,8 +177,12 @@ function ShippingDetailsLeft() {
             />
           </div>
 
-          <Link to='/paymentdetails' className='block text-center w-full mt-10'><button className='bg-blue-600 rounded w-56 h-12 sm:w-full text-white sm:h-14'>Proceed to payment</button></Link>
+          {
+          cartItems.length ? <Link id='proceedToPayment' to='/paymentdetails' className='block text-center w-full mt-10'><button className='bg-blue-600 rounded w-56 h-12 sm:w-full text-white sm:h-14'>Proceed to payment</button></Link> : <Link to='' className='block text-center w-full mt-10' id='cart-warning'><button className='bg-blue-600 rounded w-56 h-12 sm:w-full text-white sm:h-14'>Proceed to payment</button></Link>
+          }
       </form>
+
+      <div className='empty-cart'><div className='text-white'>your cart is empty</div> <i className='text-white'><BsEmojiExpressionless /></i></div>
     </div>
   )
 }

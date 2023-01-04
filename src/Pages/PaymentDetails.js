@@ -3,9 +3,14 @@ import Metamask from '../Images/MetaMask.png';
 import Coinbase from '../Images/Coinbase.png';
 import Walletconnect from '../Images/WalletConnect.png';
 import Phantom from '../Images/Phantom.png';
+import { Link } from 'react-router-dom';
 
-function PaymentDetails({total, cartItems}) {
+function PaymentDetails({total, cartItems, setCartItems}) {
   const shippingFee = 3
+
+  function resetCart(){
+    setCartItems([])
+  }
 
   return (
     <div className='pt-24 pb-10 px-5 sm:px-16 text-zinc-500 flex'>
@@ -89,7 +94,7 @@ function PaymentDetails({total, cartItems}) {
         </div>
 
         <div>
-          <button className='bg-blue-600 w-full h-16 text-2xl text-white mt-9 rounded-md'>Confirm</button>
+          <Link to='/thanks' onClick={resetCart}><button className='bg-blue-600 w-full h-16 text-2xl text-white mt-9 rounded-md'>Confirm</button></Link>
         </div>
       </div>
 

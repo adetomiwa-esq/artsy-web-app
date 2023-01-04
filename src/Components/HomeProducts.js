@@ -10,8 +10,7 @@ import user5 from '../Images/Ellipse28.png';
 import { BsArrowRight } from 'react-icons/bs'
 
 
-function HomeProducts({windowWidth}) {
-    console.log(windowWidth)
+function HomeProducts() {
   return (
     <div className='px-10 md:px-24'>
         <h1 className='text-2xl sm:text-5xl mb-4'>Featured Products</h1>

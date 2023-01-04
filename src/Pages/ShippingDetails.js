@@ -1,6 +1,7 @@
-import React from 'react'
-import ShippingDetailsLeft from '../Components/ShippingDetailsLeft'
-import CartItem from '../Components/CartItem'
+import React from 'react';
+import ShippingDetailsLeft from '../Components/ShippingDetailsLeft';
+import CartItem from '../Components/CartItem';
+
 
 function ShippingDetails({cartItems, setCartItems, setTotal, total}) {
 
@@ -8,7 +9,7 @@ function ShippingDetails({cartItems, setCartItems, setTotal, total}) {
 
   return (
     <div className='pt-24 pb-10'>
-      <ul className='hidden sm:block sm:flex justify-between w-9/12 md:w-7/12 lg:w-5/12 m-auto relative'>
+      <ul className='hidden sm:flex justify-between w-9/12 md:w-7/12 lg:w-5/12 m-auto relative'>
             <li>
                 <div>Shopping cart</div>
             </li>
@@ -24,7 +25,12 @@ function ShippingDetails({cartItems, setCartItems, setTotal, total}) {
             <div className='absolute w-full h-1 bg-zinc-300 -bottom-2'></div>
         </ul>
         <div className='mx-5 lg:mx-10 mt-6 flex'>
-          <ShippingDetailsLeft />
+
+          <ShippingDetailsLeft 
+            cartItems={cartItems}
+          />
+
+
           <div className='hidden md:block ml-5 w-6/12'>
             <div>
             {
@@ -62,6 +68,7 @@ function ShippingDetails({cartItems, setCartItems, setTotal, total}) {
             </div>
           </div>
         </div>
+        
     </div>
   )
 }

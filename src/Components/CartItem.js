@@ -2,7 +2,6 @@ import React from 'react';
 import { AiOutlineClose } from 'react-icons/ai'
 
 function CartItem({ imgSrc, price, quantity, id, itemName, total, setTotal, item, setCartItems }) {
-  console.log(total)
   const subtractTotal = () => {
     setTotal(total - price)
     setCartItems((prevValue) => prevValue.filter((cartItem) => cartItem.id !== item.id))

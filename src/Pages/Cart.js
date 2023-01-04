@@ -28,7 +28,7 @@ function Cart({cartItems, setCartItems, setTotal, total}) {
     
   return (
     <div className='py-20 text-zinc-400'>
-        <ul className='hidden sm:block sm:flex justify-between w-9/12 md:w-7/12 lg:w-5/12 m-auto relative'>
+        <ul className='hidden sm:flex justify-between w-9/12 md:w-7/12 lg:w-5/12 m-auto relative'>
             <li className='relative text-black'>
                 <div>Shopping cart</div>
                 <div className='absolute w-full h-1 bg-black -bottom-2 z-20'></div>
@@ -89,7 +89,7 @@ function Cart({cartItems, setCartItems, setTotal, total}) {
             </div>
         </div>
 
-        <div className='empty-cart'><div className='text-blue-600'>your cart is empty</div> <i className='text-yellow-400'><BsEmojiExpressionless /></i></div>
+        <div className='empty-cart'><div className='text-white'>your cart is empty</div> <i className='text-white'><BsEmojiExpressionless /></i></div>
     </div>
   )
 }

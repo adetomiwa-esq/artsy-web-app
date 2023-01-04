@@ -24,7 +24,7 @@ function DropBox({drop}) {
             <div className=''>{drop.date}</div>
             <h2 className='text-black text-2xl'>{drop.event}</h2>
             <p className='text-sm'>{drop.text}</p>
-            <p className='flex'><div>Creator:</div><span className='ml-2 text-blue-400'>{drop.creator}</span></p>
+            <div className='flex'><div>Creator:</div><span className='ml-2 text-blue-400'>{drop.creator}</span></div>
             <a href='#' className='text-blue-400 underline'>{drop.link}</a>
         </div>
     </div>

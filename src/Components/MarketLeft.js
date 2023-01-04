@@ -5,26 +5,26 @@ import { AiOutlineDown, AiOutlineUp } from 'react-icons/ai';
 
 function MarketLeft() {
 
-  const [filter, setFilter] = useState(false);
+  const [filter, setFilter] = useState(true);
 
   function toggleFilter() {
     setFilter((previous) => !previous)
   }
 
-  const [price, setPrice] = useState(false);
+  const [price, setPrice] = useState(true);
 
   function togglePrice() {
     setPrice((previous) => !previous)
   }
 
-  const [artist, setArtist] = useState(false);
+  const [artist, setArtist] = useState(true);
 
   function listArtistsPrices() {
     setArtist((previous) => !previous)
   }
 
     return(
-      <div className='text-neutral-600 '>
+      <div className='text-neutral-600 hidden sm:block'>
         <div className='relative w-40 h-8'>
           <input
             className='bg-zinc-200 placeholder-gray-400 w-full h-full pl-6 max-w-full'
@@ -48,7 +48,7 @@ function MarketLeft() {
           </div>
 
           <div className='text-sm'>
-            <div className='flex mb-1'>
+            <div className='flex mb-3'>
               <input 
                 type='checkbox'
                 className='bg-zinc-200 mr-2'
@@ -56,7 +56,7 @@ function MarketLeft() {
               <div>Editorials</div>
             </div>
 
-            <div className='flex mb-1'>
+            <div className='flex mb-3'>
               <input 
                 type='checkbox'
                 className='bg-zinc-200 mr-2'
@@ -64,7 +64,7 @@ function MarketLeft() {
               <div>Fashion</div>
             </div>
 
-            <div className='flex mb-1'>
+            <div className='flex mb-3'>
               <input 
                 type='checkbox'
                 className='bg-zinc-200 mr-2'
@@ -72,7 +72,7 @@ function MarketLeft() {
               <div>Optics</div>
             </div>
 
-            <div className='flex mb-1'>
+            <div className='flex mb-3'>
               <input 
                 type='checkbox'
                 className='bg-zinc-200 mr-2'
@@ -80,7 +80,7 @@ function MarketLeft() {
               <div>{`Art & Museum`}</div>
             </div>
 
-            <div className='flex mb-1'>
+            <div className='flex mb-3'>
               <input 
                 type='checkbox'
                 className='bg-zinc-200 mr-2'
@@ -92,14 +92,14 @@ function MarketLeft() {
         </div>
 
 
-        <div className={`${price ? '' : 'h-7'} overflow-y-hidden mb-10`}>
+        <div className={`${price ? '' : 'h-7'} overflow-y-hidden mb-12`}>
           <div className='flex items-center mb-4 pr-4 text-black text-lg'>
             <h3>By Price</h3>
             <div className='ml-auto' onClick={togglePrice}>{price ?<AiOutlineUp /> : <AiOutlineDown />}</div>
           </div>
 
-          <div className='mt-3 text-sm'>
-            {`$100.00 - $150.00`}
+          <div className='mt-7 text-sm'>
+            $100.00 - $150.00
           </div>
 
           <div className='mt-3'>
@@ -115,11 +115,11 @@ function MarketLeft() {
             <div className='ml-auto' onClick={listArtistsPrices}>{artist ?<AiOutlineUp /> : <AiOutlineDown />}</div>
           </div>
 
-          <div className='mb-3 text-sm'>All</div>
-          <div className='mb-3 text-sm'>{`Below $100.00`}</div>
-          <div className='mb-3 text-sm'>{`$100.00 - $150.00`}</div>
-          <div className='mb-3 text-sm'>{`$150.00 - $200`}</div>
-          <div className='mb-3 text-sm'>{`Below $200.00`}</div>
+          <div className='mb-4 text-sm'>All</div>
+          <div className='mb-4 text-sm'>Below $100.00</div>
+          <div className='mb-4 text-sm'>$100.00 - $150.00</div>
+          <div className='mb-4 text-sm'>$150.00 - $200</div>
+          <div className='mb-4 text-sm'>Below $200.00</div>
         </div>
 
         <select className='w-full'>

@@ -9,7 +9,7 @@ import product8 from '../Images/marketImg8.png';
 import product9 from '../Images/marketImg9.png';
 
 
-export default [
+const marketImg = [
     {
         name: 'PHILOMENA',
         price: 37,
@@ -73,3 +73,5 @@ export default [
         id: 9
     },
 ]
+
+export default marketImg;

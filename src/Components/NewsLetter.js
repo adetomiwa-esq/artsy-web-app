@@ -4,7 +4,7 @@ import { AiOutlineMail } from 'react-icons/ai';
 
 function NewsLetter() {
   return (
-    <div className='w-full overflow-x-hidden pb-5'>
+    <div className='w-full overflow-x-hidden pb-5 text-zinc-500'>
         <div>
             <div className='flex flex-col items-start mb-3 ml-3 sm:items-center sm:h-52 sm:m-6 sm:border-2 pt-6'>
                 <h3 className='text-2xl mb-1 sm:mb-4'>NEWSLETTER</h3>
@@ -20,16 +20,16 @@ function NewsLetter() {
 
             <footer>
               <div className='flex items-center mt-7 pl-5 sm:pl-10 sm:pr-10 md:pl-20 md:pr-20 lg:pl-48 lg:pr-40'>
-                <div className='text-3xl hidden sm:block'>ARTSY.</div>
+                <div className='text-3xl text-black hidden sm:block'>ARTSY.</div>
                 <div className='sm:flex sm:h-40 md:w-9/12 lg:w-8/12 sm:justify-between sm:ml-auto'>
-                  <ul className='sm:flex sm:flex-col sm:justify-between hidden sm:block'>
+                  <ul className='sm:flex sm:flex-col sm:justify-between hidden'>
                     <li>Home</li>
                     <li>Marketplace</li>
                     <li>Auctions</li>
                     <li>Drops</li>
                   </ul>
 
-                  <ul className='sm:flex sm:flex-col sm:justify-between hidden sm:block'>
+                  <ul className='sm:flex sm:flex-col sm:justify-between hidden'>
                     <li>Blog</li>
                     <li>Wallets</li>
                     <li>Rates</li>

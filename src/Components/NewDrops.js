@@ -3,7 +3,7 @@ import dropImg2 from '../Images/dropImg2.png';
 import dropImg3 from '../Images/dropImg3.png';
 import dropImg4 from '../Images/dropImg4.png';
 
-export default [
+const NewDrops = [
     {
         imgSrc: dropImg1,
         status: 'UPCOMING',
@@ -78,3 +78,5 @@ export default [
         joinColor: 'bg-zinc-200',
     },
 ]
+
+export default NewDrops

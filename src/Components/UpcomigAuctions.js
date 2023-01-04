@@ -48,12 +48,12 @@ function UpcomigAuctions() {
         </div>
 
         <div className='mt-20 mb-20'>
-            <Link to='/' className='flex items-center justify-between text-2xl sm:text-4xl border-t-4 px-7'>
+            <Link to='/marketplace' className='flex items-center justify-between text-2xl sm:text-4xl border-t-4 px-7'>
                 <div>Explore marketplace</div>
                 <i className='text-5xl text-blue-500 sm:text-7xl'><FiArrowRight /></i>
             </Link>
 
-            <Link to='/' className='flex items-center justify-between text-2xl sm:text-4xl border-t-4 border-b-4 px-7'>
+            <Link to='/auctions' className='flex items-center justify-between text-2xl sm:text-4xl border-t-4 border-b-4 px-7'>
                 <div>See auctions</div>
                 <i className='text-5xl text-blue-500 sm:text-7xl'><FiArrowRight /></i>
             </Link>

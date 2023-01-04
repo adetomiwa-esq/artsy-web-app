@@ -59,7 +59,7 @@ function Navbar({cartItems}) {
           </li>
 
           <li className='' onClick={closeMobileLinks}>
-            <Link className='relative group' to='/'>
+            <Link className='relative group' to='/auctions'>
               Auctions
               <div className='w-0 h-0.5 rounded-sm absolute bg-black group-hover:w-full transition-transform'/>
             </Link>

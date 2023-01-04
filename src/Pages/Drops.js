@@ -14,9 +14,10 @@ function Drops() {
         </div>
 
         <div className='w-full'>
-          {NewDrops.map((drop) => {
+          {NewDrops.map((drop, index) => {
             return <DropBox 
               drop={drop}
+              key={index}
             />
           })}
         </div>

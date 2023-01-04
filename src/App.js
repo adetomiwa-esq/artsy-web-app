@@ -9,6 +9,9 @@ import Drops from './Pages/Drops';
 import Cart from './Pages/Cart';
 import ShippingDetails from './Pages/ShippingDetails';
 import PaymentDetails from './Pages/PaymentDetails';
+import Auctions from './Pages/Auctions';
+import LiveAuction from './Pages/LiveAuction';
+import Thanks from './Pages/Thanks';
 
 function App() {
 
@@ -30,9 +33,11 @@ function App() {
             setCartItems={setCartItems}
             cartItems={cartItems}
             setTotal={setTotal}
+            setCurrentItem={setCurrentItem}
             total={total}
           />}/>
           <Route path='/drop' element={<Drops />} />
+          <Route path='/auctions' element={<Auctions />} />
           <Route path='cart' element={<Cart 
             cartItems={cartItems}
             setCartItems={setCartItems}
@@ -48,7 +53,10 @@ function App() {
           <Route path='/paymentdetails' element={<PaymentDetails
             cartItems={cartItems}
             total={total}
+            setCartItems={setCartItems}
           />} />
+          <Route path='liveAuction' element={<LiveAuction />} />
+          <Route path='/thanks' element={<Thanks />} />
           
         </Routes>
       </BrowserRouter>
