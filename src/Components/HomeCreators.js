@@ -11,7 +11,7 @@ function HomeCreators() {
   const [current, setCurrent] = useState(0)
 
   useEffect(() => {
-    const displayTimer = setInterval(imageFade, 7000)
+    const displayTimer = setInterval(imageFade, 3000)
 
     function imageFade(){
       

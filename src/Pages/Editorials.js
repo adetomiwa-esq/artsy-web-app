@@ -27,7 +27,7 @@ function Editorials({currentItem, setCurrentItem, setCartItems, setTotal, total}
             }
     }
     
-  }, [])
+  }, [currentItem.itemName])
 
     const [number, setNumber] = useState(1)
 
